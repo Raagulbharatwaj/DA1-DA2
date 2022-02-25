@@ -1,0 +1,144 @@
+@keyframes animation1
+{
+    0%{color:forestgreen;}
+    50%{color:blueviolet;}
+    100%{color:forestgreen;}
+}
+head,body
+{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.heading
+{
+    font-size: 120px;
+    font-family: cursive;
+    color:forestgreen;
+    text-align: center;
+    text-shadow: 6px 6px 10px #5e0303;
+    animation-name: animation1;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+/* Parent Container */
+.content_img
+{
+    position:relative;
+    width: 600px;
+    height:500px;
+    margin-right: 400px;
+    margin-left: 450px;
+
+} 
+/* Child Text Container */
+.content_img div
+{
+    position: absolute;
+    top : 0%;
+    bottom: 0%;
+    left:0%;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}  
+/* Hover on Parent Container */
+ .content_img:hover
+{
+    cursor: pointer;
+}  
+.content_img:hover div
+{
+    width: 600px;
+    height:500px;
+    text-align: center;
+    font-size: 30px;
+    font-family:cursive;
+    visibility: visible;
+    opacity: 0.7; 
+}
+#para1
+{
+    font-size: 30px;
+    font-family:cursive;
+    color:darkgoldenrod;
+    text-align: center;
+}
+#list1
+{
+    font-size: 30px;
+    font-family:cursive;
+    color:darkgoldenrod;
+    text-align: center;
+    list-style-position:inherit;
+}
+.subheading
+{
+    font-size: 50px;
+    color:deeppink;
+    text-align: center;
+    text-decoration: underline;
+    font-family: cursive;
+}
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #38444d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+} 
+li 
+{
+    float: left;
+}
+li a, .dropbtn 
+{
+    display: inline-block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn 
+{
+    background-color: red;
+}
+li.dropdown 
+{
+    display: inline-block;
+} 
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover 
+{
+    background-color:burlywood;
+} 
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
